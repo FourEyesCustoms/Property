@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Property Owner</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="already_registered">Already have an account. Click here</string>
+    <string name="not_registered">Click here to register a new account</string>
+    <string name="forgot_password">Forgot password</string>
+
 </resources>
