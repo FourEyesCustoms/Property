@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "721787941270",
+    "firebase_url": "https://awesome-rentals-cd9d6.firebaseio.com",
+    "project_id": "awesome-rentals-cd9d6",
+    "storage_bucket": "awesome-rentals-cd9d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721787941270:android:0f803eae753be41b",
+        "android_client_info": {
+          "package_name": "com.example.propertyowner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721787941270-mifpbotm0qevbekf4ns1aoeocm4gnede.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.propertyowner",
+            "certificate_hash": "046145add2178d9f2cf6aa586c73fe561c2e2ad2"
+          }
+        },
+        {
+          "client_id": "721787941270-9pvtfinfoeuvssu7m3i2mfio4r4dfak3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhyX022Y6ZtncBBDJFfU7xtZvhXIsd6qE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721787941270-9pvtfinfoeuvssu7m3i2mfio4r4dfak3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
