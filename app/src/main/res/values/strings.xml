@@ -5,5 +5,10 @@
     <string name="already_registered">Already have an account. Click here</string>
     <string name="not_registered">Click here to register a new account</string>
     <string name="forgot_password">Forgot password</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="remember_me">Remember me</string>
+    <string name="not_a_landlord">Not a landlord?</string>
+    <string name="i_am_a_landlord">I am a Landlord</string>
 
 </resources>
