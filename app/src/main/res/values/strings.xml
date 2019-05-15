@@ -10,5 +10,6 @@
     <string name="remember_me">Remember me</string>
     <string name="not_a_landlord">Not a landlord?</string>
     <string name="i_am_a_landlord">I am a Landlord</string>
+    <string name="user_name">User Name</string>
 
 </resources>
