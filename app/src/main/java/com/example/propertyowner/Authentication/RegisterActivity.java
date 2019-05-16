@@ -94,30 +94,30 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    private void validatePhone(final String registerName, final String registerPhoneNumber, final String registerPassword){
+    private void validatePhone(final String registerName, final String phone, final String registerPassword){
         final DatabaseReference rootRef;
         rootRef= FirebaseDatabase.getInstance().getReference();
 
         rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (!(dataSnapshot.child("users").child("phone").exists())){
+                if (!(dataSnapshot.child("users").child(phone).exists())){
 
                     HashMap<String ,Object> userMap = new HashMap<>();
-                    userMap.put("phone",registerPhoneNumber);
+                    userMap.put("phone",phone);
                     userMap.put("name",registerName);
                     userMap.put("password",registerPassword);
 
-                    rootRef.child("users").child("phone").updateChildren(userMap)
+                    rootRef.child("users").child(phone).updateChildren(userMap)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
                                         toastMessage("Account Created successfully");
                                         progressDialog.dismiss();
-                                        Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
-                                        startActivity(intent);
-                                        finish();
+                                       /* Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                        startActivity(intent); */
+                                       finish();
                                     }
                                     else {
                                         progressDialog.dismiss();
