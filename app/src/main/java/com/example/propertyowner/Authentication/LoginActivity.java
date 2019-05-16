@@ -1,6 +1,7 @@
 package com.example.propertyowner.Authentication;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.propertyowner.HomeActivity;
 import com.example.propertyowner.Models.User;
 import com.example.propertyowner.R;
 import com.google.firebase.database.DataSnapshot;
@@ -34,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
 
     //Vars
-    private String parentDbName = "Users";
+    private String parentDbName = "users";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         loginPhoneNumber=findViewById(R.id.login_phone_number);
         loginPassword=findViewById(R.id.login_password);
         forgotPassword=findViewById(R.id.forget_password);
-        loginBtn=findViewById(R.id.login_btn);
+        loginBtn=findViewById(R.id.login_button);
         landlordPanel=findViewById(R.id.landlord_panel_link);
         notLandlord=findViewById(R.id.not_landlord);
         rememberMe=findViewById(R.id.remember_me_checkbox);
@@ -93,10 +95,17 @@ public class LoginActivity extends AppCompatActivity {
 
                     User usersData=dataSnapshot.child(parentDbName).child(phone).getValue(User.class);
 
-                    if (usersData != null && usersData.getPhone().equals(phone)) {
+                    if (usersData.getPhone().equals(phone)) {
                         if (usersData.getPassword().equals(password)) {
                             toastMessage("Logged in successfully");
                             progressDialog.dismiss();
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        else {
+                            progressDialog.dismiss();
+                            toastMessage("Wrong password");
                         }
                     }
                 }
