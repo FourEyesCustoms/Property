@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.propertyowner.HomeActivity;
 import com.example.propertyowner.Models.User;
+import com.example.propertyowner.Prevalent.Prevalent;
 import com.example.propertyowner.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,6 +22,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rey.material.widget.CheckBox;
+
+import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -50,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         landlordPanel=findViewById(R.id.landlord_panel_link);
         notLandlord=findViewById(R.id.not_landlord);
         rememberMe=findViewById(R.id.remember_me_checkbox);
+        Paper.init(this);
 
         progressDialog=new ProgressDialog(this);
 
@@ -84,6 +88,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void allowAccessToAccount(final String phone, final String password) {
+
+        if (rememberMe.isChecked()){
+            Paper.book().write(Prevalent.userPhoneKey,phone);
+            Paper.book().write(Prevalent.userPasswordKey,password);
+        }
+
         final DatabaseReference rootRef;
         rootRef= FirebaseDatabase.getInstance().getReference();
 
