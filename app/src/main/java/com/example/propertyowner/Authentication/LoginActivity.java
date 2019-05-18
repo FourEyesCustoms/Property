@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.propertyowner.CategoryActivity;
 import com.example.propertyowner.HomeActivity;
 import com.example.propertyowner.Models.User;
 import com.example.propertyowner.Prevalent.Prevalent;
@@ -109,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (usersData.getPassword().equals(password)) {
                             toastMessage("Logged in successfully");
                             progressDialog.dismiss();
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, CategoryActivity.class);
                             startActivity(intent);
                             finish();
                         }

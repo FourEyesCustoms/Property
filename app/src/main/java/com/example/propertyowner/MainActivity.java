@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                         if (usersData.getPassword().equals(password)) {
                             toastMessage("Logged in successfully");
                             progressDialog.dismiss();
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
                             startActivity(intent);
                             finish();
                         }

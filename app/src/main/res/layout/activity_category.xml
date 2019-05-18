@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linear1_category_layout"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_marginTop="30dp"
@@ -32,28 +32,23 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:id="@+id/bedsitter"/>
+            android:id="@+id/house_rental_id"
+            android:src="@drawable/rental_house"
+            android:layout_marginTop="20dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:id="@+id/one_bedroom" />
+            android:id="@+id/house_for_sale_id"
+            android:src="@drawable/house_for_sale"
+            android:layout_marginTop="20dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:id="@+id/two_bedroom" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:id="@+id/three_bedroom" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:id="@+id/apartment" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:id="@+id/single_room" />
+            android:id="@+id/land_for_sale"
+            android:src="@drawable/land_for_sale_icon"
+            android:layout_marginTop="20dp"/>
+
     </LinearLayout>
 
 </RelativeLayout>
